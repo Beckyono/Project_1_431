@@ -1,6 +1,6 @@
-(lang dune 3.0)
+(lang dune 2.9)
 
-(name guestapp)
+(name project1)
 
 (generate_opam_files true)
 
@@ -16,7 +16,7 @@
 (documentation https://url/to/documentation)
 
 (package
- (name guestapp)
+ (name project1)
  (synopsis "A short synopsis")
  (description "A longer description")
  (depends ocaml dune dream)
