@@ -1,4 +1,4 @@
 (executable
- (public_name guestapp)
+ (public_name project1)
  (name main)
  (libraries dream))
