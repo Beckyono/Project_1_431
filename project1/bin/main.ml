@@ -1,6 +1,11 @@
+(*Author:   Rebecca, Brandon*)
+(*Purpose:  the main file to hold functions*)
+(*Filename: main.ml*)
+
+(*Libraries*)
 open Dream
 
-(* Define a type to represent guestbook entries *)
+(*Entry Type*)
 type entry = {
   name : string;
   check_in : string;
@@ -9,10 +14,10 @@ type entry = {
   comment : string option;
 }
 
-(* File to store guestbook entries *)
+(*File?*)
 let guestbook_file = "guestbook_entries.txt"
 
-(* Load entries from file *)
+(*Loading Entries*)
 let load_entries () =
   if Sys.file_exists guestbook_file then
     let ic = open_in guestbook_file in
@@ -37,7 +42,7 @@ let load_entries () =
     read_entries []
   else []
 
-(* Save entries to file *)
+(*Saving Entries*)
 let save_entry entry =
   let oc = open_out_gen [Open_append; Open_creat] 0o666 guestbook_file in
   Printf.fprintf oc "%s;%s;%s;%d;%s\n"
@@ -45,10 +50,10 @@ let save_entry entry =
     (match entry.comment with Some c -> c | None -> "");
   close_out oc
 
-(* Temporary storage for guestbook entries *)
+(*Temp Storage*)
 let guestbook = ref (load_entries ())
 
-(* Render the guestbook form *)
+(*Render the guestbook form*)
 let render_form _req =
   html
     "<form method='POST' action='/add'>
@@ -60,7 +65,7 @@ let render_form _req =
       <button type='submit'>Submit</button>
      </form>"
 
-(* Handle form submission *)
+(*Adding Entries -> Handling*)
 let add_entry req =
   let name = Dream.param req "name" in
   let check_in = Dream.param req "check_in" in
@@ -73,7 +78,7 @@ let add_entry req =
   save_entry entry;
   Dream.html "Entry added successfully! <a href='/'>Back to form</a>"
 
-(* Render the guestbook entries *)
+(*Guestbook Entries -> Rendering*)
 let view_entries _req =
   let entries_html =
     !guestbook
@@ -86,7 +91,7 @@ let view_entries _req =
   in
   Dream.html (Printf.sprintf "<h1>Guestbook Entries</h1>%s" entries_html)
 
-(* Define the routes *)
+(*Routes*)
 let () =
   Dream.run
   @@ Dream.logger
