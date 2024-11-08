@@ -5,11 +5,11 @@
 (generate_opam_files true)
 
 (source
- (github username/reponame))
+ (github Beckyono/Project_1_431))
 
-(authors "Author Name")
+(authors "Brandon Fischer, Kevin Ryan, Rebecca Ostrander")
 
-(maintainers "Maintainer Name")
+(maintainers "Maintainers -> Brandon Fischer, Kevin Ryan, Rebecca Ostrander")
 
 (license LICENSE)
 
@@ -17,10 +17,8 @@
 
 (package
  (name project1)
- (synopsis "A short synopsis")
- (description "A longer description")
+ (synopsis "A guestbook form")
+ (description "A guestbook form that allows users to input their name, check in date, check out date, rating for the hotel, and any additional comments.")
  (depends ocaml dune dream)
  (tags
-  (topics "to describe" your project)))
-
-; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html
+  (topics "ocaml" "web" "dream" "dune")))

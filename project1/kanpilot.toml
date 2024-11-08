@@ -1,0 +1,171 @@
+name = "project"
+skipFolders = [ "node_modules", ".vscode", "out", "dist", ".vscode-test" ]
+skipFiles = [ ".gitignore", "package.json" ]
+
+[[processes]]
+id = "process1"
+name = "To Do"
+
+  [[processes.tasks]]
+  id = "task1"
+  title = "This is a new feature - Local Storage"
+  description = "<p>Add a way to store the information from the sumbissions. Currenlty storing in a file but it's bugged</p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  checkList = [ ]
+  priority = ""
+  linkCommits = [ ]
+
+[[processes]]
+id = "process2"
+name = "In Progress"
+
+  [[processes.tasks]]
+  id = "task2"
+  title = "This is a bug should be repair - localhost handling Error"
+  description = '<p>When the form is submitted, <a target="_blank" rel="noopener noreferrer nofollow" href="http://localhost">localhost</a> couldnt handle the request</p>'
+  tag = "bug"
+  linkFiles = [ ]
+  dueDate = ""
+  priority = ""
+  linkCommits = [ ]
+
+    [[processes.tasks.checkList]]
+    id = "mzndqguwjngudup0jdu1o62c"
+    title = "check logs when submit form is clicked on in web browser"
+    completed = false
+
+[[processes]]
+id = "process3"
+name = "Done"
+
+  [[processes.tasks]]
+  id = "hgrmc5vspmqgpanmizs1y03u"
+  title = "Dune-Project file setup"
+  description = "<p>Task completed by Kevin. Bare bone set up to be eddited if needed along the way. make sure all libraries and packages/depends we need are included</p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  priority = ""
+  linkCommits = [ ]
+
+    [[processes.tasks.checkList]]
+    id = "yrzoxec1kptj2p7sgg9616fn"
+    title = "Depends -> ocaml, dune, dream"
+    completed = true
+
+    [[processes.tasks.checkList]]
+    id = "ggmakie401tn5jag4p84tyhd"
+    title = "builds"
+    completed = true
+
+    [[processes.tasks.checkList]]
+    id = "fplqeev3thi2w53ni3wt5amb"
+    title = "opam version (not 3.0)"
+    completed = true
+
+  [[processes.tasks]]
+  id = "zglh1j8s9y82cxgjs4vpgf3u"
+  title = "Project1.Opam File Set Up"
+  description = "<p>Completed by Kevin. Set up the bare bones of the dune-project file so the project will compile</p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  priority = ""
+  linkCommits = [ ]
+
+    [[processes.tasks.checkList]]
+    id = "l8yffoelyq4fx4kgv6o1inpa"
+    title = "dune version 2.9"
+    completed = true
+
+    [[processes.tasks.checkList]]
+    id = "a1c8b3ir3dzoc6jk7f1gtfqb"
+    title = "packages"
+    completed = true
+
+  [[processes.tasks]]
+  id = "fz8vqhht62ovimjkqo3zqavu"
+  title = "Main.ml bare bones set up"
+  description = "<p>Completed by Rebecca - set up a name box, date check in/check out date entry, review for the hotel (out of 5 stars), and additional comments</p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  priority = ""
+  linkCommits = [ ]
+
+    [[processes.tasks.checkList]]
+    id = "bbds0jyqgnii8r99z2v7o3ao"
+    title = "add entries function (check in, check out, comment, ratiing, name)"
+    completed = true
+
+    [[processes.tasks.checkList]]
+    id = "lwtvmurzqk6586njsn31rqn4"
+    title = "view entries function"
+    completed = true
+
+    [[processes.tasks.checkList]]
+    id = "yhja8a6l12jgbm14ap9az50z"
+    title = "routes"
+    completed = true
+
+    [[processes.tasks.checkList]]
+    id = "sh1kvai6nu9efsqg0ypg7qj0"
+    title = "render"
+    completed = true
+
+  [[processes.tasks]]
+  id = "l5utmelelqvlfvuqiyu83emv"
+  title = "Bug Report - Resolved"
+  description = '<p>libraries not found ""| (libraries dream))" Error: Library "dream" not found. Hint: try: dune external-lib-deps --missing @@default" Was the error given. Messed with the /bin/dune file for a bit after checking that dream was installed and everything was up to date. Library compiler was not being initialized -&gt; fixed by running "eval $(opam env)"</p>'
+  tag = "bug"
+  linkFiles = [ ]
+  dueDate = ""
+  priority = ""
+  linkCommits = [ ]
+
+    [[processes.tasks.checkList]]
+    id = "vqcnd6jm5995bygvl71aqbf8"
+    title = "try: dune external-lib-deps --missing @@default"
+    completed = true
+
+    [[processes.tasks.checkList]]
+    id = "tsfs8bz5d8mtean2xzk5tmv7"
+    title = "Make sure Dream is installed and up to date"
+    completed = true
+
+    [[processes.tasks.checkList]]
+    id = "ef0kcpaskzylcnj2xss8cu6b"
+    title = 'check WSL/Linux updates "sudo apt-get update"'
+    completed = true
+
+    [[processes.tasks.checkList]]
+    id = "nwnmthccpjnw906ei1ufii9p"
+    title = "run eval $(opam env)"
+    completed = true
+
+  [[processes.tasks]]
+  id = "hmnrr16eb9a1do0f2x1agsd0"
+  title = "additions to main.ml"
+  description = "<p>Brandon adding a way to save the guestbook entries to a local file</p>"
+  tag = "backlog"
+  linkFiles = [ ]
+  dueDate = ""
+  priority = ""
+  linkCommits = [ ]
+
+    [[processes.tasks.checkList]]
+    id = "qslmso2czvv2lgcqod761g8n"
+    title = "loading entries"
+    completed = true
+
+    [[processes.tasks.checkList]]
+    id = "nshl9st04m13vf23lfjilzg6"
+    title = "save entries"
+    completed = true
+
+    [[processes.tasks.checkList]]
+    id = "ppa2lushky3e9nit5j7qjw3w"
+    title = "editting view entries"
+    completed = true

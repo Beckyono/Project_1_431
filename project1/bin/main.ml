@@ -1,5 +1,5 @@
 (*Author:   Rebecca, Brandon*)
-(*Purpose:  the main file to hold functions*)
+(*Purpose:  the main file to hold functions. Rendering - Handling - Loading - Creating*)
 (*Filename: main.ml*)
 
 (*Libraries*)
